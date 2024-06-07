@@ -26,9 +26,7 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.x'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r src/requirements.txt
     - name: Run tests
-      run: pytest -q src/test/TestShapes.py
+      run: |
+        chmod +x run_test.sh
+        ./run_test.sh
